@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 bool isPossible(vector<int> &stalls, int k,int mid){
     int cowCount=1;
     int lastPos=stalls[0];
@@ -14,10 +17,12 @@ bool isPossible(vector<int> &stalls, int k,int mid){
     return false;
 }
 
-int aggressiveCows(vector<int> &stalls, int k)
+int main()
 {
     //    Write your code here.
+    vector<int>stalls={4,2,1,3,6};
     sort(stalls.begin(),stalls.end());
+        int k=2;
         int s=0,ans=-1;
         int n=stalls.size();
         int e=stalls[n-1];
@@ -32,5 +37,5 @@ int aggressiveCows(vector<int> &stalls, int k)
             }
             mid = s +(e-s)/2;
         }
-    return ans;
+    cout<<ans<<endl;
 }
